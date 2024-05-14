@@ -34,3 +34,4 @@ SemaphoreSlim: Each semaphore in the dictionary allows only one thread to enter 
 - Dependency on Redis and single point of failure.
 - If the system crashes while holding locks, it could lead to data inconsistencies or loss
 - In scenarios where multiple services contend for the same locks, there is a risk of deadlocks if proper precautions are not taken
+- The code assumes a single Redis instance running on localhost. In a real-world distributed system, Redis should be deployed in a highly available and fault-tolerant manner to prevent single points of failure.
